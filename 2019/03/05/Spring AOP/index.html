@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="java,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Spring AOP一.概念​    aop 面向切面编程，可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。 ​    在一个业务流程中，需要在改业务流程开始前或执行后执行某些操作。然而这些操作与业务没有什么关系，而且所有类似业务都需要执行这样的操作，这是就需要在这些业务前后织入相应的代码。  二.AOP的优点 实现程序功能模块的统一维护 使业务逻辑之">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring AOP">
+<meta property="og:url" content="http://yoursite.com/2019/03/05/Spring AOP/index.html">
+<meta property="og:site_name" content="闪电哈士奇~">
+<meta property="og:description" content="Spring AOP一.概念​    aop 面向切面编程，可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。 ​    在一个业务流程中，需要在改业务流程开始前或执行后执行某些操作。然而这些操作与业务没有什么关系，而且所有类似业务都需要执行这样的操作，这是就需要在这些业务前后织入相应的代码。  二.AOP的优点 实现程序功能模块的统一维护 使业务逻辑之">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-13T06:26:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring AOP">
+<meta name="twitter:description" content="Spring AOP一.概念​    aop 面向切面编程，可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。 ​    在一个业务流程中，需要在改业务流程开始前或执行后执行某些操作。然而这些操作与业务没有什么关系，而且所有类似业务都需要执行这样的操作，这是就需要在这些业务前后织入相应的代码。  二.AOP的优点 实现程序功能模块的统一维护 使业务逻辑之">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/05/Spring AOP/">
+
+
+
+
+
+  <title>Spring AOP | 闪电哈士奇~</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">闪电哈士奇~</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-categories"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/Spring AOP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邓君城">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闪电哈士奇~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Spring AOP</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T15:18:00+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h1><h2 id="一-概念"><a href="#一-概念" class="headerlink" title="一.概念"></a>一.概念</h2><p>​    aop 面向切面编程，可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。</p>
+<p>​    在一个业务流程中，需要在改业务流程开始前或执行后执行某些操作。然而这些操作与业务没有什么关系，而且所有类似业务都需要执行这样的操作，这是就需要在这些业务前后织入相应的代码。</p>
+<hr>
+<h2 id="二-AOP的优点"><a href="#二-AOP的优点" class="headerlink" title="二.AOP的优点"></a>二.AOP的优点</h2><ul>
+<li>实现程序功能模块的统一维护</li>
+<li>使业务逻辑之间耦合度降低，提高程序的可重用性</li>
+<li>提高程序的开发效率</li>
+</ul>
+<hr>
+<h2 id="三-AOP原理"><a href="#三-AOP原理" class="headerlink" title="三.AOP原理"></a>三.AOP原理</h2><p>​    使用动态代理，对指定类的方法进行增强，生成增强的代理对象，使用父类引用指向该代理对象。</p>
+<hr>
+<h2 id="四-AOP术语"><a href="#四-AOP术语" class="headerlink" title="四.AOP术语"></a>四.AOP术语</h2><h3 id="1-advice"><a href="#1-advice" class="headerlink" title="1.advice"></a>1.advice</h3><p>​    增强处理，把需要添加的功能先写好，等待织入。</p>
+<h3 id="2-JoinPoint"><a href="#2-JoinPoint" class="headerlink" title="2.JoinPoint"></a>2.JoinPoint</h3><p>​    连接点，就是被增强部分的增强代码织入点，例如方法前、方法后。</p>
+<h3 id="3-Pointcut"><a href="#3-Pointcut" class="headerlink" title="3.Pointcut"></a>3.Pointcut</h3><p>​    切入点，例如在指定对象需要织入增强代码，但不是所有方法都需要增强，这些被增强的方法叫做切入点。</p>
+<h3 id="4-Aspect"><a href="#4-Aspect" class="headerlink" title="4.Aspect"></a>4.Aspect</h3><p>​    切面，切面就是切入点和增强代码的结合。</p>
+<h3 id="5-Introduction"><a href="#5-Introduction" class="headerlink" title="5.Introduction"></a>5.Introduction</h3><p>​    引入，允许我们向现有的对象添加新的方法属性。</p>
+<h3 id="6-Target"><a href="#6-Target" class="headerlink" title="6.Target"></a>6.Target</h3><p>​    引入中的现有对象，也就是需要被增强的对象，它可以再毫不知情的情况下，被织入增强代码。</p>
+<h3 id="7-Proxy"><a href="#7-Proxy" class="headerlink" title="7.Proxy"></a>7.Proxy</h3><p>​    代理，实现AOP，就是通过代理，生成增强的对象，外部持有该对象的引用。</p>
+<h3 id="8-Weaving"><a href="#8-Weaving" class="headerlink" title="8.Weaving"></a>8.Weaving</h3><p>​    织入，把切面织入到指定对象并生成代理对象的过程。</p>
+<hr>
+<h2 id="五-AOP原理"><a href="#五-AOP原理" class="headerlink" title="五.AOP原理"></a>五.AOP原理</h2><p>​    通过Java的动态代理机制，把切点指定的类生成代理对象并代替原对象返回给Spring容器，用户在注入该对象时，会把该代理对象注入进去，从而得到了增强的代理对象。</p>
+<hr>
+<h2 id="六-Spring-AOP的使用（注解方式）"><a href="#六-Spring-AOP的使用（注解方式）" class="headerlink" title="六.Spring AOP的使用（注解方式）"></a>六.Spring AOP的使用（注解方式）</h2><h3 id="1-Aspect"><a href="#1-Aspect" class="headerlink" title="1.@Aspect"></a>1.@Aspect</h3><p>​    在类上使用，在该类中定义了切面和切点，也就是定义了对哪些对象增强，增强了什么功能。</p>
+<h3 id="2-Before"><a href="#2-Before" class="headerlink" title="2.@Before"></a>2.@Before</h3><p>​    在方法上使用，定义了需要在哪些对象的哪些方法增强，同时定义了增强功能，并且在被增强方法执行前执行。</p>
+<p>​    示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Before</span>(<span class="string">"execution(* com.test.*.dao.mapper..*.*(..))"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">(JoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">    MethodSignature methodSignature = (MethodSignature) (joinPoint.getSignature());</span><br><span class="line">    Method method = methodSignature.getMethod();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//执行mapper前，选择相应的数据源</span></span><br><span class="line">    DataSource dataSource = method.getAnnotation(DataSource.class);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">null</span> != dataSource) &#123;</span><br><span class="line">        JDBCContextHolder.setDataSourceType(dataSource.value());</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        JDBCContextHolder.setDataSourceType(DataSourceType.MASTER);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-AfterReturning"><a href="#3-AfterReturning" class="headerlink" title="3.@AfterReturning"></a>3.@AfterReturning</h3><p>​    在方法上使用，定义了需要在哪些对象的哪些方法增强，同时定义了增强功能，并且被增强方法返回后执行。</p>
+<p>​    示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@AfterReturning</span>(<span class="string">"execution(* com.test.*.dao.mapper..*.*(..))"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturning</span><span class="params">(JoinPoint joinPoint)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//清除数据源标记</span></span><br><span class="line">    JDBCContextHolder.clearDataSourceType();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-AfterThrowing"><a href="#4-AfterThrowing" class="headerlink" title="4.@AfterThrowing"></a>4.@AfterThrowing</h3><p>​    AOP的AfterThrowing处理虽然可以对目标方法的异常进行处理，但这种处理与直接使用catch捕捉不同，catch捕捉意味着完全处理该异常，如果catch块中没有重新抛出新的异常，则该方法可能正常结束；而AfterThrowing处理虽然处理了该异常，但它不能完全处理异常，该异常依然会传播到上一级调用者，即JVM。</p>
+<h3 id="5-After"><a href="#5-After" class="headerlink" title="5.@After"></a>5.@After</h3><p>​     后置通知, 在被增强方法执行之后执行 。</p>
+<h3 id="6-Around"><a href="#6-Around" class="headerlink" title="6.@Around"></a>6.@Around</h3><p>​    @Before 和@After的结合。</p>
+<hr>
+<h2 id="七-execution表达式"><a href="#七-execution表达式" class="headerlink" title="七.execution表达式"></a>七.execution表达式</h2><p>​    execution表达式的的作用是匹配相应的类或者方法。</p>
+<p>​    示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">任意公共方法的执行：</span><br><span class="line">execution(<span class="keyword">public</span> * *(..))</span><br><span class="line">    </span><br><span class="line">任何一个以“set”开始的方法的执行：</span><br><span class="line">execution(* set*(..))</span><br><span class="line">    </span><br><span class="line">AccountService 接口的任意方法的执行：</span><br><span class="line">execution(* com.xyz.service.AccountService.*(..))</span><br><span class="line">    </span><br><span class="line">定义在service包里的任意方法的执行：</span><br><span class="line">execution(* com.xyz.service.*.*(..))</span><br><span class="line">    </span><br><span class="line">定义在service包或者子包里的任意方法的执行：</span><br><span class="line">execution(* com.xyz.service..*.*(..))</span><br><span class="line">    </span><br><span class="line">在service包里的任意连接点（在Spring AOP中只是方法执行） ：</span><br><span class="line">within(com.xyz.service.*)</span><br><span class="line">    </span><br><span class="line">在service包或者子包里的任意连接点（在Spring AOP中只是方法执行） ：</span><br><span class="line">within(com.xyz.service..*)</span><br><span class="line">    </span><br><span class="line">实现了 AccountService 接口的代理对象的任意连接点（在Spring AOP中只是方法执行） ：</span><br><span class="line"><span class="keyword">this</span>(com.xyz.service.AccountService)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="八-AOP应用（工作中使用到的）"><a href="#八-AOP应用（工作中使用到的）" class="headerlink" title="八.AOP应用（工作中使用到的）"></a>八.AOP应用（工作中使用到的）</h2><ul>
+<li><p>结合自定义注解，实现动态切换数据源（读写分离）</p>
+</li>
+<li><p>spring事务</p>
+</li>
+<li><p>异步任务</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/04/Markdown 学习文档/" rel="next" title="Markdown学习文档">
+                <i class="fa fa-chevron-left"></i> Markdown学习文档
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/13/Python面向对象/" rel="prev" title="Python面向对象">
+                Python面向对象 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">邓君城</p>
+              <p class="site-description motion-element" itemprop="description">working</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-AOP"><span class="nav-number">1.</span> <span class="nav-text">Spring AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-概念"><span class="nav-number">1.1.</span> <span class="nav-text">一.概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-AOP的优点"><span class="nav-number">1.2.</span> <span class="nav-text">二.AOP的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-AOP原理"><span class="nav-number">1.3.</span> <span class="nav-text">三.AOP原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-AOP术语"><span class="nav-number">1.4.</span> <span class="nav-text">四.AOP术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-advice"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.advice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-JoinPoint"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.JoinPoint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Pointcut"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.Pointcut</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Aspect"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.Aspect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Introduction"><span class="nav-number">1.4.5.</span> <span class="nav-text">5.Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Target"><span class="nav-number">1.4.6.</span> <span class="nav-text">6.Target</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Proxy"><span class="nav-number">1.4.7.</span> <span class="nav-text">7.Proxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Weaving"><span class="nav-number">1.4.8.</span> <span class="nav-text">8.Weaving</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-AOP原理"><span class="nav-number">1.5.</span> <span class="nav-text">五.AOP原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-Spring-AOP的使用（注解方式）"><span class="nav-number">1.6.</span> <span class="nav-text">六.Spring AOP的使用（注解方式）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Aspect"><span class="nav-number">1.6.1.</span> <span class="nav-text">1.@Aspect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Before"><span class="nav-number">1.6.2.</span> <span class="nav-text">2.@Before</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-AfterReturning"><span class="nav-number">1.6.3.</span> <span class="nav-text">3.@AfterReturning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-AfterThrowing"><span class="nav-number">1.6.4.</span> <span class="nav-text">4.@AfterThrowing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-After"><span class="nav-number">1.6.5.</span> <span class="nav-text">5.@After</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Around"><span class="nav-number">1.6.6.</span> <span class="nav-text">6.@Around</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七-execution表达式"><span class="nav-number">1.7.</span> <span class="nav-text">七.execution表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八-AOP应用（工作中使用到的）"><span class="nav-number">1.8.</span> <span class="nav-text">八.AOP应用（工作中使用到的）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">邓君城</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

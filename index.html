@@ -190,6 +190,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-categories"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -232,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/08/Python基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/Python基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邓君城">
@@ -251,7 +271,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/08/Python基础/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2019/03/13/Python基础/" itemprop="url">Python基础</a></h1>
         
 
         <div class="post-meta">
@@ -263,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-08T16:04:23+08:00">
-                2019-03-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-13T14:38:00+08:00">
+                2019-03-13
               </time>
             
 
@@ -273,6 +293,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -303,8 +345,7 @@
       
         
           
-            <p>[TOC]</p>
-<h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><h2 id="1-List"><a href="#1-List" class="headerlink" title="1.List"></a>1.List</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">list = [1, 2, 3]</span><br><span class="line"></span><br><span class="line">length = len(list) #获取长度</span><br><span class="line"></span><br><span class="line">list[-1] 		   #获取最后一个元素的的值</span><br><span class="line"></span><br><span class="line">list.insert(1, 4)  #在指定位置插入元素</span><br><span class="line"></span><br><span class="line">list.pop() 		   #删除末尾元素</span><br><span class="line"></span><br><span class="line">list.pop(i)		   #删除指定索引的元素</span><br></pre></td></tr></table></figure>
+            <h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><h2 id="1-List"><a href="#1-List" class="headerlink" title="1.List"></a>1.List</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">list = [1, 2, 3]</span><br><span class="line"></span><br><span class="line">length = len(list) #获取长度</span><br><span class="line"></span><br><span class="line">list[-1] 		   #获取最后一个元素的的值</span><br><span class="line"></span><br><span class="line">list.insert(1, 4)  #在指定位置插入元素</span><br><span class="line"></span><br><span class="line">list.pop() 		   #删除末尾元素</span><br><span class="line"></span><br><span class="line">list.pop(i)		   #删除指定索引的元素</span><br></pre></td></tr></table></figure>
 <h2 id="2-tuple"><a href="#2-tuple" class="headerlink" title="2.tuple"></a>2.tuple</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">person = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) <span class="comment">#不可变数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#如果要定义一个元素的tuple,()可以表示数学表达式中小括号</span></span><br><span class="line">person = (<span class="number">1</span>,) <span class="comment"># 需要用,来消除歧义</span></span><br></pre></td></tr></table></figure>
 <h2 id="3-input"><a href="#3-input" class="headerlink" title="3.input"></a>3.input</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">birth = input(<span class="string">'birth:'</span>)</span><br><span class="line"><span class="keyword">if</span> birth &gt; <span class="number">2000</span></span><br><span class="line">	print(<span class="string">'00前'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'00后'</span>)</span><br></pre></td></tr></table></figure>
 <p>输入1982，报错，因为input输入的str，不能直接和整形进行比较，需要转换：</p>
@@ -329,6 +370,159 @@
 <p>装饰器：</p>
 <p>​    对于一个函数，如果想要不改变原来定义的情况下增强函数的功能。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></span><br><span class="line">   print(<span class="string">'2015-3-25'</span>)</span><br><span class="line"><span class="comment">#函数对象有一个__name__属性，可以拿到函数的名字</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kw)</span>:</span></span><br><span class="line">        print(<span class="string">'call %s():'</span> % func.__name__)</span><br><span class="line">        <span class="keyword">return</span> func(*args, **kw)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"><span class="comment">#然后需要在now()方法上加上@log 相当于执行了 now = log(now)</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>now()</span><br><span class="line">call now():</span><br><span class="line"><span class="number">2015</span><span class="number">-3</span><span class="number">-25</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/Python面向对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邓君城">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闪电哈士奇~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/13/Python面向对象/" itemprop="url">Python面向对象</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-13T14:38:00+08:00">
+                2019-03-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Python面向对象"><a href="#Python面向对象" class="headerlink" title="Python面向对象"></a>Python面向对象</h1><h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">	<span class="comment">#构造方法</span></span><br><span class="line">    __init__(self, name):</span><br><span class="line">        self.name = name</span><br><span class="line">    <span class="comment">#private, 私有变量，在变量前面加上两个下划线</span></span><br><span class="line">    __a = <span class="number">12</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"annimal is running...."</span>)</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">(Animal)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"Dog is running...."</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span><span class="params">(Animal)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"Cat is running...."</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#可以通过isinstance()方法来判断对象是否是某个类的实例</span></span><br><span class="line">a = Dog()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(a, Dog)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(a, Cat)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(a, Animal)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#多态</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_twice</span><span class="params">(annimal)</span>:</span></span><br><span class="line">    annimal.run()</span><br><span class="line">    annimal.run()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>run_twice(Animal())</span><br><span class="line">annimal <span class="keyword">is</span> running....</span><br><span class="line">annimal <span class="keyword">is</span> running....</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>run_twice(Dog())</span><br><span class="line">Dog <span class="keyword">is</span> running....</span><br><span class="line">Dog <span class="keyword">is</span> running....</span><br><span class="line"></span><br><span class="line"><span class="comment">#动态语言的多态</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Timer</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"start....."</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>run_twice(Timer())</span><br><span class="line">start.....</span><br><span class="line">start.....</span><br><span class="line"><span class="comment">#只要有run方法就行了，不一定要是Animal的子类</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="获取对象信息"><a href="#获取对象信息" class="headerlink" title="获取对象信息"></a>获取对象信息</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="number">123</span>)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">int</span>'&gt;</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; <span class="title">type</span><span class="params">(<span class="string">'str'</span>)</span></span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">str</span>'&gt;</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; <span class="title">type</span><span class="params">(None)</span></span></span><br><span class="line"><span class="class">&lt;<span class="title">type</span><span class="params">(None)</span> '<span class="title">NoneType</span>'&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">#判断方法</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; <span class="title">import</span> <span class="title">types</span></span></span><br><span class="line"><span class="class">&gt;&gt;&gt; <span class="title">def</span> <span class="title">fn</span><span class="params">()</span>:</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">pass</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(fn)==types.FunctionType</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(abs)==types.BuiltinFunctionType</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="keyword">lambda</span> x: x)==types.LambdaType</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)))==types.GeneratorType</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用dir()获取一个对象的所有属性和方法</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dir(<span class="string">'ABC'</span>)</span><br><span class="line">[<span class="string">'__add__'</span>, <span class="string">'__class__'</span>,..., <span class="string">'__subclasshook__'</span>, <span class="string">'capitalize'</span>, <span class="string">'casefold'</span>,..., <span class="string">'zfill'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#仅仅把属性和方法列出来是不够的，配合getattr()、setattr()以及hasattr()，我们可以直接操作一个对象的状态：</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyObject</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">       self.x = <span class="number">9</span></span><br><span class="line">	   <span class="function"><span class="keyword">def</span> <span class="title">power</span><span class="params">(self)</span>:</span></span><br><span class="line">       <span class="keyword">return</span> self.x * self.x</span><br><span class="line">obj = MyObject()</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hasattr(obj, <span class="string">'x'</span>) <span class="comment"># 有属性'x'吗？</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.x</span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hasattr(obj, <span class="string">'y'</span>) <span class="comment"># 有属性'y'吗？</span></span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>setattr(obj, <span class="string">'y'</span>, <span class="number">19</span>) <span class="comment"># 设置一个属性'y'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hasattr(obj, <span class="string">'y'</span>) <span class="comment"># 有属性'y'吗？</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>getattr(obj, <span class="string">'y'</span>) <span class="comment"># 获取属性'y'</span></span><br><span class="line"><span class="number">19</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.y <span class="comment"># 获取属性'y'</span></span><br><span class="line"><span class="number">19</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#如果试图获取不存在的属性，会抛出AttributeError的错误：</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>getattr(obj, <span class="string">'z'</span>) <span class="comment"># 获取属性'z'</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">AttributeError: <span class="string">'MyObject'</span> object has no attribute <span class="string">'z'</span></span><br><span class="line"><span class="comment">#可以传入一个default参数，如果属性不存在，就返回默认值：</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>getattr(obj, <span class="string">'z'</span>, <span class="number">404</span>) <span class="comment"># 获取属性'z'，如果不存在，返回默认值404</span></span><br><span class="line"><span class="number">404</span></span><br><span class="line"><span class="comment">#也可以获取方法属性</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="类属性和实例属性"><a href="#类属性和实例属性" class="headerlink" title="类属性和实例属性"></a>类属性和实例属性</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#由于Python是动态语言，根据类创建的实例可以任意绑定属性。给实例绑定属性的方法是通过实例变量，或者通过self变量：</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">s = Student(<span class="string">'Bob'</span>)</span><br><span class="line">s.score = <span class="number">90</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#重要区分，类内部声明的变量，是所有该类的对象和该类共有的，通过其中一个改变该变量的值，则其他调用的时候也会改变。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line"><span class="meta">... </span>    name = <span class="string">'Student'</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = Student() <span class="comment"># 创建实例s</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(s.name) <span class="comment"># 打印name属性，因为实例并没有name属性，所以会继续查找class的name属性</span></span><br><span class="line">Student</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(Student.name) <span class="comment"># 打印类的name属性</span></span><br><span class="line">Student</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.name = <span class="string">'Michael'</span> <span class="comment"># 给实例绑定name属性</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(s.name) <span class="comment"># 由于实例属性优先级比类属性高，因此，它会屏蔽掉类的name属性</span></span><br><span class="line">Michael</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(Student.name) <span class="comment"># 但是类属性并未消失，用Student.name仍然可以访问</span></span><br><span class="line">Student</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> s.name <span class="comment"># 如果删除实例的name属性</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(s.name) <span class="comment"># 再次调用s.name，由于实例的name属性没有找到，类的name属性就显示出来了</span></span><br><span class="line">Student</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="slots"><a href="#slots" class="headerlink" title="__slots__"></a>__slots__</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> types <span class="keyword">import</span> MethodType</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment">#给对象绑定属性</span></span><br><span class="line">s = Student()</span><br><span class="line">s.name = <span class="string">"Deng"</span></span><br><span class="line">print(s.name)</span><br><span class="line">&gt;&gt;&gt;Deng</span><br><span class="line"></span><br><span class="line"><span class="comment">#还可以给实例绑定一个方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_age</span><span class="params">(self, age)</span>:</span></span><br><span class="line">    self.age = age</span><br><span class="line">s.set_age = MethodType(set_age, s)</span><br><span class="line">s.set_age(<span class="number">12</span>)</span><br><span class="line">print(s.age)</span><br><span class="line">&gt;&gt;&gt;<span class="number">12</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#注意，给一个实例绑定方法对另一个实例是不起作用的</span></span><br><span class="line"><span class="comment">#为了给所有实例都绑定方法，可以给类绑定方法</span></span><br><span class="line">Student.set_age = set_age</span><br><span class="line"></span><br><span class="line"><span class="comment">##如果要对绑定的属性进行限制，那么就要用到了__slots__</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    __slots__ = (<span class="string">'name'</span>, <span class="string">'age'</span>) <span class="comment"># 用tuple定义允许绑定的属性名称</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="使用-property"><a href="#使用-property" class="headerlink" title="使用@property"></a>使用@property</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._score</span><br><span class="line"></span><br><span class="line"><span class="meta">    @score.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> isinstance(value, int):</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">'score must be an integer!'</span>)</span><br><span class="line">        <span class="keyword">if</span> value &lt; <span class="number">0</span> <span class="keyword">or</span> value &gt; <span class="number">100</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">'score must between 0 ~ 100!'</span>)</span><br><span class="line">        self._score = value</span><br><span class="line"></span><br><span class="line">s = Studeng()</span><br><span class="line">s.score = <span class="number">12</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">12</span></span><br><span class="line">s.score = <span class="number">1111</span></span><br><span class="line">&gt;&gt;&gt;Traceback (most recent call last):</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span> ...</span><br><span class="line">&gt;&gt;&gt;ValueError: score must between <span class="number">0</span> ~ <span class="number">100</span>!</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="str"><a href="#str" class="headerlink" title="__str__"></a>__str__</h2><p>类似于java中的toString()方法</p>
 
           
         
@@ -377,7 +571,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/04/Java 注解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/Spring AOP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邓君城">
@@ -396,7 +590,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/04/Java 注解/" itemprop="url">Java注解</a></h1>
+                <a class="post-title-link" href="/2019/03/05/Spring AOP/" itemprop="url">Spring AOP</a></h1>
         
 
         <div class="post-meta">
@@ -408,8 +602,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T18:16:00+08:00">
-                2019-03-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T15:18:00+08:00">
+                2019-03-05
               </time>
             
 
@@ -431,8 +625,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
                   </a>
                 </span>
 
@@ -470,69 +664,51 @@
       
         
           
-            <h1 id="Java-注解"><a href="#Java-注解" class="headerlink" title="Java 注解"></a>Java 注解</h1><h2 id="一-定义"><a href="#一-定义" class="headerlink" title="一.定义"></a>一.定义</h2><p>​    注解（annotation）也叫<strong>元数据</strong>，可以在指定位置标记可以在编译、类加载、运行时被读取，然后进行相应的处理。</p>
+            <h1 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h1><h2 id="一-概念"><a href="#一-概念" class="headerlink" title="一.概念"></a>一.概念</h2><p>​    aop 面向切面编程，可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。</p>
+<p>​    在一个业务流程中，需要在改业务流程开始前或执行后执行某些操作。然而这些操作与业务没有什么关系，而且所有类似业务都需要执行这样的操作，这是就需要在这些业务前后织入相应的代码。</p>
 <hr>
-<h2 id="二-常见的注解"><a href="#二-常见的注解" class="headerlink" title="二.常见的注解"></a>二.常见的注解</h2><h3 id="1-Override"><a href="#1-Override" class="headerlink" title="1.@Override"></a>1.@Override</h3><p>​    当子类重写父类方法时，子类的该方法可以加入此注解。作用：确保子类确实重写了父类方法，且在父类删除该方法时，在子类中该错误会有错误提示。</p>
-<hr>
-<h3 id="2-Deprecated"><a href="#2-Deprecated" class="headerlink" title="2.@Deprecated"></a>2.@Deprecated</h3><p>​    该注解作用于方法和类上，标记改元素已过期，用户使用该方法或类时，编译器可以做出相应的警告，告诉用户不推荐使用。</p>
-<hr>
-<h3 id="3-Suppvisewarnings"><a href="#3-Suppvisewarnings" class="headerlink" title="3.@Suppvisewarnings"></a>3.@Suppvisewarnings</h3><p>​    用于通知java编译器禁止特定的编译警告。</p>
-<hr>
-<h2 id="三-注解的好处"><a href="#三-注解的好处" class="headerlink" title="三.注解的好处"></a>三.注解的好处</h2><p>​    1.现在的常用框架、工具等都广泛的应用了注解，使用时能够读懂别人的代码。</p>
-<p>​    2.在不影响业务逻辑的情况下，与业务代码进行分离。</p>
-<p>​    3.代替繁琐的xml配置</p>
-<hr>
-<h2 id="四-元注解"><a href="#四-元注解" class="headerlink" title="四.元注解"></a>四.元注解</h2><p>​    <strong>元注解是可以注解到其它注解上的注解，由jdk提供的一种最基本的注解。</strong></p>
-<hr>
-<h3 id="1-Retention"><a href="#1-Retention" class="headerlink" title="1.@Retention"></a>1.@Retention</h3><p>​    Retention的英文意思是保留期。该注解标记了被注解的注解的生命周期。</p>
-<p>​    该注解的值有：</p>
-<ul>
-<li>RetentionPolicy.SOURCE 该注解只在源代码上保留，在编译器编译时将会被忽略，更无法加载到JVM中，在运行时程序无法获取该注解的元信息。</li>
-<li>RetentionPolicy.CLASS 该注解在编译器保留，但无法加载到JVM中，在运行时无法获取到该注解的元信息。</li>
-<li>RetentionPolicy.RUNTIME 该注解在运行时保留，加载到JVM中，在运行时可以获取到该注解的元信息。</li>
+<h2 id="二-AOP的优点"><a href="#二-AOP的优点" class="headerlink" title="二.AOP的优点"></a>二.AOP的优点</h2><ul>
+<li>实现程序功能模块的统一维护</li>
+<li>使业务逻辑之间耦合度降低，提高程序的可重用性</li>
+<li>提高程序的开发效率</li>
 </ul>
 <hr>
-<h3 id="2-Documented"><a href="#2-Documented" class="headerlink" title="2.@Documented"></a>2.@Documented</h3><p>​    该注解与文档相关，它的作用是能够将注解中的元信息包含到javadoc中。</p>
+<h2 id="三-AOP原理"><a href="#三-AOP原理" class="headerlink" title="三.AOP原理"></a>三.AOP原理</h2><p>​    使用动态代理，对指定类的方法进行增强，生成增强的代理对象，使用父类引用指向该代理对象。</p>
 <hr>
-<h3 id="3-Target"><a href="#3-Target" class="headerlink" title="3.@Target"></a>3.@Target</h3><p>​    Target的英文意思是目标。该注解标记了注解运用的地方</p>
-<p>​    该注解的值有：</p>
-<ul>
-<li>ElementType.ANNOTATION_TYPE 可以对一个注解进行注解。</li>
-<li>ElementType.CONSTRUCTOR 可以对构造方法进行注解。</li>
-<li>ElementType.FIELD 可以给属性进行注解。</li>
-<li>ElementType.LOCAL_VARIABLE 可以对局部变量进行注解。</li>
-<li>ElementType.METHOD 可以对方法进行注解。</li>
-<li>ElementType.PACKAGE 可以对包进行注解。</li>
-<li>ElementType.PARAMETER 可以对方法的参数进行注解。</li>
-<li>ElementType.TYPE 可以对类型进行注解，比如类、接口、枚举。</li>
+<h2 id="四-AOP术语"><a href="#四-AOP术语" class="headerlink" title="四.AOP术语"></a>四.AOP术语</h2><h3 id="1-advice"><a href="#1-advice" class="headerlink" title="1.advice"></a>1.advice</h3><p>​    增强处理，把需要添加的功能先写好，等待织入。</p>
+<h3 id="2-JoinPoint"><a href="#2-JoinPoint" class="headerlink" title="2.JoinPoint"></a>2.JoinPoint</h3><p>​    连接点，就是被增强部分的增强代码织入点，例如方法前、方法后。</p>
+<h3 id="3-Pointcut"><a href="#3-Pointcut" class="headerlink" title="3.Pointcut"></a>3.Pointcut</h3><p>​    切入点，例如在指定对象需要织入增强代码，但不是所有方法都需要增强，这些被增强的方法叫做切入点。</p>
+<h3 id="4-Aspect"><a href="#4-Aspect" class="headerlink" title="4.Aspect"></a>4.Aspect</h3><p>​    切面，切面就是切入点和增强代码的结合。</p>
+<h3 id="5-Introduction"><a href="#5-Introduction" class="headerlink" title="5.Introduction"></a>5.Introduction</h3><p>​    引入，允许我们向现有的对象添加新的方法属性。</p>
+<h3 id="6-Target"><a href="#6-Target" class="headerlink" title="6.Target"></a>6.Target</h3><p>​    引入中的现有对象，也就是需要被增强的对象，它可以再毫不知情的情况下，被织入增强代码。</p>
+<h3 id="7-Proxy"><a href="#7-Proxy" class="headerlink" title="7.Proxy"></a>7.Proxy</h3><p>​    代理，实现AOP，就是通过代理，生成增强的对象，外部持有该对象的引用。</p>
+<h3 id="8-Weaving"><a href="#8-Weaving" class="headerlink" title="8.Weaving"></a>8.Weaving</h3><p>​    织入，把切面织入到指定对象并生成代理对象的过程。</p>
+<hr>
+<h2 id="五-AOP原理"><a href="#五-AOP原理" class="headerlink" title="五.AOP原理"></a>五.AOP原理</h2><p>​    通过Java的动态代理机制，把切点指定的类生成代理对象并代替原对象返回给Spring容器，用户在注入该对象时，会把该代理对象注入进去，从而得到了增强的代理对象。</p>
+<hr>
+<h2 id="六-Spring-AOP的使用（注解方式）"><a href="#六-Spring-AOP的使用（注解方式）" class="headerlink" title="六.Spring AOP的使用（注解方式）"></a>六.Spring AOP的使用（注解方式）</h2><h3 id="1-Aspect"><a href="#1-Aspect" class="headerlink" title="1.@Aspect"></a>1.@Aspect</h3><p>​    在类上使用，在该类中定义了切面和切点，也就是定义了对哪些对象增强，增强了什么功能。</p>
+<h3 id="2-Before"><a href="#2-Before" class="headerlink" title="2.@Before"></a>2.@Before</h3><p>​    在方法上使用，定义了需要在哪些对象的哪些方法增强，同时定义了增强功能，并且在被增强方法执行前执行。</p>
+<p>​    示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Before</span>(<span class="string">"execution(* com.test.*.dao.mapper..*.*(..))"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">(JoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">    MethodSignature methodSignature = (MethodSignature) (joinPoint.getSignature());</span><br><span class="line">    Method method = methodSignature.getMethod();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//执行mapper前，选择相应的数据源</span></span><br><span class="line">    DataSource dataSource = method.getAnnotation(DataSource.class);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">null</span> != dataSource) &#123;</span><br><span class="line">        JDBCContextHolder.setDataSourceType(dataSource.value());</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        JDBCContextHolder.setDataSourceType(DataSourceType.MASTER);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-AfterReturning"><a href="#3-AfterReturning" class="headerlink" title="3.@AfterReturning"></a>3.@AfterReturning</h3><p>​    在方法上使用，定义了需要在哪些对象的哪些方法增强，同时定义了增强功能，并且被增强方法返回后执行。</p>
+<p>​    示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@AfterReturning</span>(<span class="string">"execution(* com.test.*.dao.mapper..*.*(..))"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturning</span><span class="params">(JoinPoint joinPoint)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//清除数据源标记</span></span><br><span class="line">    JDBCContextHolder.clearDataSourceType();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-AfterThrowing"><a href="#4-AfterThrowing" class="headerlink" title="4.@AfterThrowing"></a>4.@AfterThrowing</h3><p>​    AOP的AfterThrowing处理虽然可以对目标方法的异常进行处理，但这种处理与直接使用catch捕捉不同，catch捕捉意味着完全处理该异常，如果catch块中没有重新抛出新的异常，则该方法可能正常结束；而AfterThrowing处理虽然处理了该异常，但它不能完全处理异常，该异常依然会传播到上一级调用者，即JVM。</p>
+<h3 id="5-After"><a href="#5-After" class="headerlink" title="5.@After"></a>5.@After</h3><p>​     后置通知, 在被增强方法执行之后执行 。</p>
+<h3 id="6-Around"><a href="#6-Around" class="headerlink" title="6.@Around"></a>6.@Around</h3><p>​    @Before 和@After的结合。</p>
+<hr>
+<h2 id="七-execution表达式"><a href="#七-execution表达式" class="headerlink" title="七.execution表达式"></a>七.execution表达式</h2><p>​    execution表达式的的作用是匹配相应的类或者方法。</p>
+<p>​    示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">任意公共方法的执行：</span><br><span class="line">execution(<span class="keyword">public</span> * *(..))</span><br><span class="line">    </span><br><span class="line">任何一个以“set”开始的方法的执行：</span><br><span class="line">execution(* set*(..))</span><br><span class="line">    </span><br><span class="line">AccountService 接口的任意方法的执行：</span><br><span class="line">execution(* com.xyz.service.AccountService.*(..))</span><br><span class="line">    </span><br><span class="line">定义在service包里的任意方法的执行：</span><br><span class="line">execution(* com.xyz.service.*.*(..))</span><br><span class="line">    </span><br><span class="line">定义在service包或者子包里的任意方法的执行：</span><br><span class="line">execution(* com.xyz.service..*.*(..))</span><br><span class="line">    </span><br><span class="line">在service包里的任意连接点（在Spring AOP中只是方法执行） ：</span><br><span class="line">within(com.xyz.service.*)</span><br><span class="line">    </span><br><span class="line">在service包或者子包里的任意连接点（在Spring AOP中只是方法执行） ：</span><br><span class="line">within(com.xyz.service..*)</span><br><span class="line">    </span><br><span class="line">实现了 AccountService 接口的代理对象的任意连接点（在Spring AOP中只是方法执行） ：</span><br><span class="line"><span class="keyword">this</span>(com.xyz.service.AccountService)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="八-AOP应用（工作中使用到的）"><a href="#八-AOP应用（工作中使用到的）" class="headerlink" title="八.AOP应用（工作中使用到的）"></a>八.AOP应用（工作中使用到的）</h2><ul>
+<li><p>结合自定义注解，实现动态切换数据源（读写分离）</p>
+</li>
+<li><p>spring事务</p>
+</li>
+<li><p>异步任务</p>
+</li>
 </ul>
-<hr>
-<h3 id="4-Inherited"><a href="#4-Inherited" class="headerlink" title="4.@Inherited"></a>4.@Inherited</h3><pre><code>Inherited的英文意思是继承。它的作用是如果一个超类被该@Inherited注解过的注解注解，如果子类没有被任何注解注解的话，那么子类继承超类的注解。
-</code></pre><hr>
-<h3 id="5-Repeatable"><a href="#5-Repeatable" class="headerlink" title="5.@Repeatable"></a>5.@Repeatable</h3><p>​    Repeatable的英文意思是可重复的。它的作用的在同一个目标上能够应用多次。</p>
-<hr>
-<h2 id="五-注解的属性"><a href="#五-注解的属性" class="headerlink" title="五.注解的属性"></a>五.注解的属性</h2><p>​    注解的属性也叫注解的成员变量。需要注意的是，在注解中定义属性时它的类型必须是 8 种基本数据类型外加 类、接口、注解及它们的数组。</p>
-<p>注解中属性可以有默认值，默认值需要用 default 关键值指定。</p>
-<p>​    代码示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(&#123;ElementType.METHOD, ElementType.TYPE, ElementType.FIELD&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> TestAnnotation &#123;</span><br><span class="line">    <span class="function">DataSource <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> DataSource.MASTER</span>;</span><br><span class="line">    <span class="function">String <span class="title">myValue</span><span class="params">()</span> <span class="keyword">default</span> "<span class="keyword">default</span>"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="六-提取注解"><a href="#六-提取注解" class="headerlink" title="六.提取注解"></a>六.提取注解</h2><p>###1.注解通过<strong>反射</strong>获取。</p>
-<p>​    首先可以通过Class对象的isAnnotation()方法判断它是否应用了某个注解，方法原型：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAnnotationPresent</span><span class="params">(Class&lt;? extends Annotation&gt; annotationClass)</span></span>;</span><br></pre></td></tr></table></figure>
-<p>​    然后通过getAnnotation()获取Annotation对象，方法原型：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;A extends Annotation&gt; <span class="function">A <span class="title">getAnnotation</span><span class="params">(Class&lt;A&gt; annotationClass)</span></span>;</span><br></pre></td></tr></table></figure>
-<p>​    当然，可以通过getAnnotations() 获取注解列表，方法原型：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Annotation[] getAnnotations();</span><br></pre></td></tr></table></figure>
-<h3 id="2-获取元数据"><a href="#2-获取元数据" class="headerlink" title="2.获取元数据"></a>2.获取元数据</h3><p>​    获取到Annotation对象后，通过对应的方法获取值，示例代码（对应以上TestAnnotion）:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Main.class.isAnnotationPresent(TestAnnotation.class))&#123;</span><br><span class="line">            TestAnnotation annotation = Main.class.getAnnotation(TestAnnotation.class);</span><br><span class="line">            System.out.println(annotation.value());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="七-示例"><a href="#七-示例" class="headerlink" title="七.示例"></a>七.示例</h2><h3 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h3><p>​    使用注解给方法标记，通过注解获取数据源。</p>
-<h3 id="2-编写主从数据库主从枚举类"><a href="#2-编写主从数据库主从枚举类" class="headerlink" title="2.编写主从数据库主从枚举类"></a>2.编写主从数据库主从枚举类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> DataSourceType &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主库</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    MASTER,</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从库</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    SLAVE</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-自定义一个注解TestAnnotation"><a href="#3-自定义一个注解TestAnnotation" class="headerlink" title="3.自定义一个注解TestAnnotation"></a>3.自定义一个注解TestAnnotation</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(&#123;ElementType.METHOD&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> DataSource &#123;</span><br><span class="line">    <span class="function">DataSourceType <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> DataSourceType.MASTER</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-数据库查询类"><a href="#4-数据库查询类" class="headerlink" title="4.数据库查询类"></a>4.数据库查询类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> UserDbHelper&#123;</span><br><span class="line">    <span class="meta">@DataSource</span>(DataSourceType.SLAVE)</span><br><span class="line">    <span class="function">User <span class="title">selectByPrimaryKey</span><span class="params">(Integer id)</span></span>&#123;</span><br><span class="line">        <span class="comment">//查询数据库代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="5-主类"><a href="#5-主类" class="headerlink" title="5.主类"></a>5.主类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(UserDbHelper.class.isAnnotationPresent(DataSource.class))&#123;</span><br><span class="line">            Annotation annotation = UserDbHelper.class.getAnnotation(DataSource.class);</span><br><span class="line">            System.out.println(annotation.value());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>最终程序输出：SLAVE</p>
-<h2 id="八-后记"><a href="#八-后记" class="headerlink" title="八.后记"></a>八.后记</h2><p>​    在示例代码中，只是获取到标记的内容并输出，并没有达到动态切换数据源的目的。如果需要，则需要使用aop在selectByPrimaryKey方法设置切点，在调用该方法前，在切面中，通过注解获取该方法的DataSource注解，通过该注解获取标记DataSourceType，然后切换数据源为DataSourceType对应的据源，来达到动态数据源的目的。在该方法执行完后，再切换为MASTER数据源。</p>
 
           
         
@@ -805,6 +981,210 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/03/Java 注解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邓君城">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闪电哈士奇~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/03/Java 注解/" itemprop="url">Java注解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-03T19:20:00+08:00">
+                2019-03-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Java-注解"><a href="#Java-注解" class="headerlink" title="Java 注解"></a>Java 注解</h1><h2 id="一-定义"><a href="#一-定义" class="headerlink" title="一.定义"></a>一.定义</h2><p>​    注解（annotation）也叫<strong>元数据</strong>，可以在指定位置标记可以在编译、类加载、运行时被读取，然后进行相应的处理。</p>
+<hr>
+<h2 id="二-常见的注解"><a href="#二-常见的注解" class="headerlink" title="二.常见的注解"></a>二.常见的注解</h2><h3 id="1-Override"><a href="#1-Override" class="headerlink" title="1.@Override"></a>1.@Override</h3><p>​    当子类重写父类方法时，子类的该方法可以加入此注解。作用：确保子类确实重写了父类方法，且在父类删除该方法时，在子类中该错误会有错误提示。</p>
+<hr>
+<h3 id="2-Deprecated"><a href="#2-Deprecated" class="headerlink" title="2.@Deprecated"></a>2.@Deprecated</h3><p>​    该注解作用于方法和类上，标记改元素已过期，用户使用该方法或类时，编译器可以做出相应的警告，告诉用户不推荐使用。</p>
+<hr>
+<h3 id="3-Suppvisewarnings"><a href="#3-Suppvisewarnings" class="headerlink" title="3.@Suppvisewarnings"></a>3.@Suppvisewarnings</h3><p>​    用于通知java编译器禁止特定的编译警告。</p>
+<hr>
+<h2 id="三-注解的好处"><a href="#三-注解的好处" class="headerlink" title="三.注解的好处"></a>三.注解的好处</h2><p>​    1.现在的常用框架、工具等都广泛的应用了注解，使用时能够读懂别人的代码。</p>
+<p>​    2.在不影响业务逻辑的情况下，与业务代码进行分离。</p>
+<p>​    3.代替繁琐的xml配置</p>
+<hr>
+<h2 id="四-元注解"><a href="#四-元注解" class="headerlink" title="四.元注解"></a>四.元注解</h2><p>​    <strong>元注解是可以注解到其它注解上的注解，由jdk提供的一种最基本的注解。</strong></p>
+<hr>
+<h3 id="1-Retention"><a href="#1-Retention" class="headerlink" title="1.@Retention"></a>1.@Retention</h3><p>​    Retention的英文意思是保留期。该注解标记了被注解的注解的生命周期。</p>
+<p>​    该注解的值有：</p>
+<ul>
+<li>RetentionPolicy.SOURCE 该注解只在源代码上保留，在编译器编译时将会被忽略，更无法加载到JVM中，在运行时程序无法获取该注解的元信息。</li>
+<li>RetentionPolicy.CLASS 该注解在编译器保留，但无法加载到JVM中，在运行时无法获取到该注解的元信息。</li>
+<li>RetentionPolicy.RUNTIME 该注解在运行时保留，加载到JVM中，在运行时可以获取到该注解的元信息。</li>
+</ul>
+<hr>
+<h3 id="2-Documented"><a href="#2-Documented" class="headerlink" title="2.@Documented"></a>2.@Documented</h3><p>​    该注解与文档相关，它的作用是能够将注解中的元信息包含到javadoc中。</p>
+<hr>
+<h3 id="3-Target"><a href="#3-Target" class="headerlink" title="3.@Target"></a>3.@Target</h3><p>​    Target的英文意思是目标。该注解标记了注解运用的地方</p>
+<p>​    该注解的值有：</p>
+<ul>
+<li>ElementType.ANNOTATION_TYPE 可以对一个注解进行注解。</li>
+<li>ElementType.CONSTRUCTOR 可以对构造方法进行注解。</li>
+<li>ElementType.FIELD 可以给属性进行注解。</li>
+<li>ElementType.LOCAL_VARIABLE 可以对局部变量进行注解。</li>
+<li>ElementType.METHOD 可以对方法进行注解。</li>
+<li>ElementType.PACKAGE 可以对包进行注解。</li>
+<li>ElementType.PARAMETER 可以对方法的参数进行注解。</li>
+<li>ElementType.TYPE 可以对类型进行注解，比如类、接口、枚举。</li>
+</ul>
+<hr>
+<h3 id="4-Inherited"><a href="#4-Inherited" class="headerlink" title="4.@Inherited"></a>4.@Inherited</h3><pre><code>Inherited的英文意思是继承。它的作用是如果一个超类被该@Inherited注解过的注解注解，如果子类没有被任何注解注解的话，那么子类继承超类的注解。
+</code></pre><hr>
+<h3 id="5-Repeatable"><a href="#5-Repeatable" class="headerlink" title="5.@Repeatable"></a>5.@Repeatable</h3><p>​    Repeatable的英文意思是可重复的。它的作用的在同一个目标上能够应用多次。</p>
+<hr>
+<h2 id="五-注解的属性"><a href="#五-注解的属性" class="headerlink" title="五.注解的属性"></a>五.注解的属性</h2><p>​    注解的属性也叫注解的成员变量。需要注意的是，在注解中定义属性时它的类型必须是 8 种基本数据类型外加 类、接口、注解及它们的数组。</p>
+<p>注解中属性可以有默认值，默认值需要用 default 关键值指定。</p>
+<p>​    代码示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(&#123;ElementType.METHOD, ElementType.TYPE, ElementType.FIELD&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> TestAnnotation &#123;</span><br><span class="line">    <span class="function">DataSource <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> DataSource.MASTER</span>;</span><br><span class="line">    <span class="function">String <span class="title">myValue</span><span class="params">()</span> <span class="keyword">default</span> "<span class="keyword">default</span>"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="六-提取注解"><a href="#六-提取注解" class="headerlink" title="六.提取注解"></a>六.提取注解</h2><p>###1.注解通过<strong>反射</strong>获取。</p>
+<p>​    首先可以通过Class对象的isAnnotation()方法判断它是否应用了某个注解，方法原型：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAnnotationPresent</span><span class="params">(Class&lt;? extends Annotation&gt; annotationClass)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>​    然后通过getAnnotation()获取Annotation对象，方法原型：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;A extends Annotation&gt; <span class="function">A <span class="title">getAnnotation</span><span class="params">(Class&lt;A&gt; annotationClass)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>​    当然，可以通过getAnnotations() 获取注解列表，方法原型：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Annotation[] getAnnotations();</span><br></pre></td></tr></table></figure>
+<h3 id="2-获取元数据"><a href="#2-获取元数据" class="headerlink" title="2.获取元数据"></a>2.获取元数据</h3><p>​    获取到Annotation对象后，通过对应的方法获取值，示例代码（对应以上TestAnnotion）:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Main.class.isAnnotationPresent(TestAnnotation.class))&#123;</span><br><span class="line">            TestAnnotation annotation = Main.class.getAnnotation(TestAnnotation.class);</span><br><span class="line">            System.out.println(annotation.value());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="七-示例"><a href="#七-示例" class="headerlink" title="七.示例"></a>七.示例</h2><h3 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h3><p>​    使用注解给方法标记，通过注解获取数据源。</p>
+<h3 id="2-编写主从数据库主从枚举类"><a href="#2-编写主从数据库主从枚举类" class="headerlink" title="2.编写主从数据库主从枚举类"></a>2.编写主从数据库主从枚举类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> DataSourceType &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主库</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    MASTER,</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从库</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    SLAVE</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-自定义一个注解TestAnnotation"><a href="#3-自定义一个注解TestAnnotation" class="headerlink" title="3.自定义一个注解TestAnnotation"></a>3.自定义一个注解TestAnnotation</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(&#123;ElementType.METHOD&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> DataSource &#123;</span><br><span class="line">    <span class="function">DataSourceType <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> DataSourceType.MASTER</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-数据库查询类"><a href="#4-数据库查询类" class="headerlink" title="4.数据库查询类"></a>4.数据库查询类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> UserDbHelper&#123;</span><br><span class="line">    <span class="meta">@DataSource</span>(DataSourceType.SLAVE)</span><br><span class="line">    <span class="function">User <span class="title">selectByPrimaryKey</span><span class="params">(Integer id)</span></span>&#123;</span><br><span class="line">        <span class="comment">//查询数据库代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-主类"><a href="#5-主类" class="headerlink" title="5.主类"></a>5.主类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(UserDbHelper.class.isAnnotationPresent(DataSource.class))&#123;</span><br><span class="line">            Annotation annotation = UserDbHelper.class.getAnnotation(DataSource.class);</span><br><span class="line">            System.out.println(annotation.value());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最终程序输出：SLAVE</p>
+<h2 id="八-后记"><a href="#八-后记" class="headerlink" title="八.后记"></a>八.后记</h2><p>​    在示例代码中，只是获取到标记的内容并输出，并没有达到动态切换数据源的目的。如果需要，则需要使用aop在selectByPrimaryKey方法设置切点，在调用该方法前，在切面中，通过注解获取该方法的DataSource注解，通过该注解获取标记DataSourceType，然后切换数据源为DataSourceType对应的据源，来达到动态数据源的目的。在该方法执行完后，再切换为MASTER数据源。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -851,7 +1231,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -861,10 +1241,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">2</span>
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -872,10 +1252,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">2</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
